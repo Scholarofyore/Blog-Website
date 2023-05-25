@@ -63,7 +63,7 @@
             border: 2px solid black;
             border-radius: 5px;
             padding-left: 15%;
-            padding: 2% 0 2% 15%;
+            padding: 2% 10% 2% 5%;
         }
 
         .form-signin {
@@ -102,6 +102,17 @@
             font-weight: 500;
         }
 
+        .landing-images {
+            display: flex;
+            flex-flow: row wrap;
+
+        }
+
+        #landing .landing-image {
+            width: 43%;
+            border-radius: 10px;
+        }
+
     </style>
 </head>
 <body>
@@ -114,7 +125,7 @@
                <form  method="post" name="Search-section">
                     <label>
                         
-                        <input type="search" name="Search-section" id="search" aria-label="search-bar" placeholder="Search for posts">
+                        <input type="search" name="Search-section" id="search" aria-label="search-bar" placeholder="Search for rooms...">
                     </label>
                </form>
             </div>
@@ -132,7 +143,9 @@
                 </div>
             
                 <div class="landing-images">
-    
+                    <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one">
+                    <img src="images/pexels-christina-morillo-768.jpg" alt="" class="landing-image two">
+                    <img src="images/pexels-helena-lopes-768.jpg" alt="" class="landing-image three">
                 </div>
             </div>
         </section>
