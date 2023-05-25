@@ -24,33 +24,102 @@
         }
 
         #parent-container {
-            width: 80%;
+            width: 100%;
             margin: auto;
             background-color: #F5EBEB;
             color: black;
+            padding: 1rem 14% 0;
         }
+
+        /* Header Styles */
+        header {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo a {
+            font-size: 1.2rem;
+            color: black;
+        }
+
+        span {
+            font-weight: normal;
+        }
+
+        .bold {
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .search-bar {
+            margin-left: auto;
+        }
+
+        .search-bar input {
+            border: 2px solid black;
+            border-radius: 5px;
+            padding-left: 15%;
+            padding: 2% 0 2% 15%;
+        }
+
+        .form-signin {
+            margin-left: 2rem;
+        }
+
+        .button {
+            display: block;
+            background-color: black;
+            border-radius: 20px;
+            padding: 4px 15px;
+            color: #F5EBEB;
+            text-align: center;
+        }
+
+        /* Landing Section */
+        .landing-container {
+            display: flex;
+            margin-bottom: 5rem;
+        }
+
+        .landing-text>p {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .landing-text .button {
+            width: 8.5rem;
+            padding: 10px;
+        }
+
+        /* Browse Topics */
+        .section-nav a {
+            margin: 0 5px;
+            font-weight: 500;
+        }
+
     </style>
 </head>
 <body>
     <div id="parent-container">
         <header>
             <div class="header-logo">
-                <p class="logo bold">Study <span> Lounge</span></p>
+                <p class="logo bold"><a href="Index.html">Study <span> Lounge</span></a></p>
             </div>
             <div class="search-bar">
                <form  method="post" name="Search-section">
                     <label>
-                        <img src="" alt="">
+                        
                         <input type="search" name="Search-section" id="search" aria-label="search-bar" placeholder="Search for posts">
                     </label>
                </form>
             </div>
-            <div class="form-submit">
-               <a href="" class="button sign-in"></a>
-            </div>
-            <div>
-                <button class="dark-mode-button">
-                </button>
+            <div class="form-signin">
+               <a href="" class="button sign-in">Sign In</a>
             </div>
         </header>
     
@@ -59,11 +128,12 @@
             <div class="landing-container">
                 <div class="landing-text">
                     <p class="bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="" class="button create-room">Create Rooms</a>
                 </div>
-                <a href="" class="button create-room"></a>
-            </div>
-            <div class="landing-images">
+            
+                <div class="landing-images">
     
+                </div>
             </div>
         </section>
      
