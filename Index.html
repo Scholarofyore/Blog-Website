@@ -17,96 +17,110 @@
             box-sizing: inherit;
             font-family: 'Open Sans', sans-serif;
         }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #parent-container {
+            width: 80%;
+            margin: auto;
+            background-color: #F5EBEB;
+            color: black;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-logo">
-            <p class="logo bold">Study <span> Lounge</span></p>
-        </div>
-        <div class="search-bar">
-           <form  method="post" name="Search-section">
-                <label>
-                    <img src="" alt="">
-                    <input type="search" name="Search-section" id="search" aria-label="search-bar" placeholder="Search for posts">
-                </label>
-           </form>
-        </div>
-        <div class="form-submit">
-           <a href="" class="button sign-in"></a>
-        </div>
-        <div>
-            <button class="dark-mode-button">
-            </button>
-        </div>
-    </header>
-
-    <main>
-    <section id="landing">
-        <div class="landing-container">
-            <div class="landing-text">
-                <p class="bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div id="parent-container">
+        <header>
+            <div class="header-logo">
+                <p class="logo bold">Study <span> Lounge</span></p>
             </div>
-            <a href="" class="button create-room"></a>
-        </div>
-        <div class="landing-images">
-
-        </div>
-    </section>
- 
-    <section id="browse-topics">
-        <div class="section-nav">
-            <a href="">All</a>
-            <a href="">Python</a>
-            <a href="">Javascript</a>
-            <a href="">React</a>
-            <a href="">Database</a>
-        </div>
-        <hr>
-        <p class="bold"> Explore more</p>
-    </section>
-
-    <section id="recent-activities">
-
-    </section>
-
-    <section id="mailing-list">
-        <div class="mailing-container">
-            <p class="bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="search-bar">
+               <form  method="post" name="Search-section">
+                    <label>
+                        <img src="" alt="">
+                        <input type="search" name="Search-section" id="search" aria-label="search-bar" placeholder="Search for posts">
+                    </label>
+               </form>
+            </div>
+            <div class="form-submit">
+               <a href="" class="button sign-in"></a>
+            </div>
             <div>
+                <button class="dark-mode-button">
+                </button>
+            </div>
+        </header>
+    
+        <main>
+        <section id="landing">
+            <div class="landing-container">
+                <div class="landing-text">
+                    <p class="bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <a href="" class="button create-room"></a>
+            </div>
+            <div class="landing-images">
+    
+            </div>
+        </section>
+     
+        <section id="browse-topics">
+            <div class="section-nav">
+                <a href="">All</a>
+                <a href="">Python</a>
+                <a href="">Javascript</a>
+                <a href="">React</a>
+                <a href="">Database</a>
+            </div>
+            <hr>
+            <p class="bold"> Explore more</p>
+        </section>
+    
+        <section id="recent-activities">
+    
+        </section>
+    
+        <section id="mailing-list">
+            <div class="mailing-container">
+                <p class="bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div>
+                    <form action="" method="post">
+                        <label for="">
+                            <input type="email" name="" id="newsletter" placeholder="Enter your email">
+                        </label>
+                    </form>
+                    <a href="http://" class="button subscribe">Submit</a>
+                </div>
+            </div>
+        </section>
+        </main>
+    
+        <footer>
+            <div class="footer-information">
+               <div>
+                <p class="logo bold-inverse"></p>
+    
+               </div>
+               <div></div>
+               <div></div>
+               <div>
                 <form action="" method="post">
                     <label for="">
                         <input type="email" name="" id="newsletter" placeholder="Enter your email">
                     </label>
                 </form>
                 <a href="http://" class="button subscribe">Submit</a>
+                <p>By entering your email, and clicking subscribe you agree to <a href="">Terms and conditions</a></p>
+               </div>
             </div>
-        </div>
-    </section>
-    </main>
-
-    <footer>
-        <div class="footer-information">
-           <div>
-            <p class="logo bold-inverse"></p>
-
-           </div>
-           <div></div>
-           <div></div>
-           <div>
-            <form action="" method="post">
-                <label for="">
-                    <input type="email" name="" id="newsletter" placeholder="Enter your email">
-                </label>
-            </form>
-            <a href="http://" class="button subscribe">Submit</a>
-            <p>By entering your email, and clicking subscribe you agree to <a href="">Terms and conditions</a></p>
-           </div>
-        </div>
-        <div class="footer-date-reserved">
-            <p>@ 2023-2026</p>
-            <p>All rights reserved</p>
-        </div>
-    </footer>
+            <div class="footer-date-reserved">
+                <p>@ 2023-2026</p>
+                <p>All rights reserved</p>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
