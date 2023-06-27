@@ -39,7 +39,7 @@ span {
 
 a {
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
 
 .header-logo p {
@@ -68,6 +68,11 @@ a {
 
 .form-signin {
     margin-left: 2rem;
+}
+
+.form-signin a:hover, .button:hover {
+    color: #E4D0D0;
+    text-decoration: none;
 }
 
 .button {
@@ -127,16 +132,13 @@ a {
     border-radius: 10px;
 }
 
-/* Modal Section */
-
-
 
 /* Browse Topics */
 #browse-topics {
     position: relative;
 }
 
-.tabs {
+.t_abs {
     display: flex;
     flex-wrap: wrap;
 }
@@ -144,7 +146,7 @@ a {
 .tabs__label {
     padding: 5px 25px;
     cursor: pointer;
-    color: rgb(82, 81, 81);
+    color: rgb(108, 107, 107);
 }
 
 .all {
@@ -161,11 +163,15 @@ a {
     display: none;
 }
 
-.tabs__radio:checked+.tabs__label {
-    font-weight: bold;
-    transition: color 0.5s linear;
+.tabs__radio:hover {
     color: black;
 }
+
+.tabs__radio:checked+.tabs__label {
+    font-weight: bold;
+    color: black;
+}
+
 
 .tabs__radio:checked+.tabs__label+.tabs__content {
     display: initial;
@@ -178,7 +184,7 @@ hr {
     width: 100%;
 }
 
-.tab-content {
+.tab_content {
     display: flex;
     flex-wrap: nowrap;
 }
@@ -193,7 +199,7 @@ hr {
 }
 
 .tab-top {
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .tab-medium {
@@ -212,7 +218,7 @@ hr {
     margin-left: 10px;
 }
 
-.tab-content img {
+.tab_content img {
     width: 100%;
 }
 
@@ -398,8 +404,8 @@ footer .news_letter {
 
 .news-letter-footer {
     position: absolute;
-    top: 0.3%;
-    right: -0.8%;
+    top: 0%;
+    right: -1.8%;
     color: black;
     background-color: #F9F5F6;
     border-color: #F5EBEB
@@ -476,7 +482,7 @@ textarea, .room-name-container input, .topic-container input {
     width: 100%;
     border: 2px solid black;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 5px 5px;
 }
 
 .topic-container label, .about-container label {
