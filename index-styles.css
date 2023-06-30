@@ -42,16 +42,6 @@ a {
     color: inherit;
 }
 
-.header-logo p {
-    transition: transform 0.2s linear;
-}
-
-.header-logo a:hover {
-    text-decoration: none;
-    transform: scale(1.2);
-    color: black;
-}
-
 .search-bar {
     margin-left: auto;
 }
