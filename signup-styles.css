@@ -14,7 +14,6 @@ html {
     }
 
     .container {
-    width: 70%;
     color: black;
     text-align: center;
     display: flex;
@@ -68,7 +67,7 @@ html {
         font-size: 0.9rem;
         margin-top: 5px;
         width: 100%;
-        color: #555555;
+        color: #555555d9;
         font-weight: 600;
     }
 
@@ -81,10 +80,10 @@ html {
         background-color: #F9F5F6;
         color: black;
         font-weight: bold;
+        border-radius: 5px;
     }
 
     .main-content-form {
-        margin-bottom: 15px;
         width: 100%;
     }
 
@@ -103,9 +102,10 @@ html {
         margin: 5px auto;
     }
 
-    .create-account, .aside-login {
+    .create-account {
         color: white;
         background-color: black;
+        padding: 10.5px;
     }
 
     .signupwithgoogle {
@@ -114,7 +114,7 @@ html {
         align-items: center;
     }
 
-    a.white-links:visited {
+    a.white-link:visited {
         color: white;
     }
 
@@ -123,11 +123,12 @@ html {
         margin-right: 5px;
     }
 
-    .sign-in-link {
+    .login-text {
+        margin: 0 auto 20px;
         font-weight: normal;
         font-size: 0.9rem;
     }
 
-    .sign-in-link a {
+    .login-text a {
         color: #D5B4B4;
     }

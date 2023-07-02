@@ -27,6 +27,11 @@ header {
     margin-bottom: 30px;
 }
 
+.header-logo a:hover {
+    text-decoration: none;
+    color: black;
+}
+
 span {
     font-weight: normal;
 }

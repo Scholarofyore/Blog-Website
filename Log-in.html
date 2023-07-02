@@ -4,9 +4,194 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Log-in StudyLounge.com</title>
+    <style>
+        html {
+    box-sizing: border-box;
+    }
+
+    * {
+    box-sizing: inherit;
+    font-family: 'Open Sans', sans-serif;
+    }
+
+    body {
+    margin: 0;
+    padding: 0;
+    background-color: #F9F5F6;
+    }
+
+    .container {
+    /* width: 70%; */
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: auto;
+    max-width: 370px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    button a {
+        cursor: pointer;
+    }
+
+    a:visited {
+        color: black;
+    }
+
+    /* Main Content */
+    .main-content {
+        display: flex;
+        flex-flow: row wrap;
+        padding: 3%;
+        font-weight: bold;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo {
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: black;
+        width: 100%;
+    }
+
+    span {
+    font-weight: normal;
+    }
+
+    h2 {
+        width: 100%;
+        margin: 50px auto 0;
+        font-size: 1.8rem;
+    }
+
+    .main-content-text, .forgot-password {
+        font-size: 0.9rem;
+        margin-top: 8px;
+        width: 100%;
+        color: #555555d9;
+        font-weight: 600;
+    }
+
+    .login-with-google {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 15px auto 10px;
+    }
+
+    button img {
+        height: 23px;
+        margin-right: 5px;
+    }
+
+    .or {
+        color: #555555;
+    }
+
+    .main-content input {
+        width: 100%;
+        margin: 15px 0;
+        border-style: none;
+        border: 1px solid black;
+        padding: 10px 5px;
+        background-color: #F9F5F6;
+        color: black;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+    .main-content-form {
+        width: 100%;
+    }
+
+    button {
+    background-color: white;
+    border-radius: 20px;
+    padding: 8px 20px;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin: 5px auto;
+    }
+
+    .forgot-password {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        margin: 0 auto 20px;
+    }
+
+    .forgot-password input {
+        cursor: pointer;
+        width: auto;
+    }
+
+    label {
+        cursor: pointer;
+        margin-left: 2px;
+    }
+
+    .forgot-password a {
+        text-decoration: underline;
+        margin-left: auto;
+    }
+
+    .white-link {
+        color: white;
+        background-color: black;
+        padding: 11px;
+    }
+
+    a.white_link:visited {
+        color: white;
+    }
+
+    .signup-text {
+        font-weight: normal;
+        font-size: 0.9rem;
+        margin-top: 25px;
+    }
+
+    .signup-text a {
+        color: #D5B4B4;
+    }
+
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="logo">
+            <p><a href="Index.html">Study<span>Lounge</span></a></p>
+        </div>
+        <div class="main-content">
+            <h2>Welcome back, Andrew</h2>
+            <p class="main-content-text">Welcome back! Please enter your details</p>
+            <button class="login-with-google">
+                <img src="images/Icons/icons8-google-48.png" alt="">
+                <a href="">Log-in with google</a>
+            </button>
+            <p class="or">or</p>
+            <form action="" class="main-content-form">
+                <input type="email" name="" id="" placeholder="Email">
+                <input type="password" name="" id="" placeholder="Password">
+            </form>
+            <div class="forgot-password">
+                <input type="checkbox" name="" id="remember-me">
+                <label for="remember-me">Remember for 30 days</label>
+                <a href="">Forgot-password</a>
+            </div>
+            <button type="submit" class="white-link"><a href="" class="white_link">Log-in</a></button>
+            <p class="signup-text">Don't have an account? <a href="sign-up.html"> Sign up for free</a></p>
+        </div>
+    </div>
 </body>
 </html>
