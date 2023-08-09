@@ -4,19 +4,346 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/12df7cb496.js" crossorigin="anonymous"></script>
+    <title>Create-Room StudyLounge.com</title>
+    <style>
+        html {
+             box-sizing: border-box;
+        }
+
+        * {
+            box-sizing: inherit;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 1rem 7%;
+            background-color: #F9F5F6;
+        }
+
+        a {
+                text-decoration: none;
+                color: inherit;
+        }
+
+        /* Main Container Styles */
+        .main-container {
+            display: grid;
+            grid-template-rows: 50px auto;
+            grid-template-columns: 23% 1fr 23%;
+        }
+
+        header {
+            grid-row: 1 / 2;
+            grid-column: 1 / span 3;
+        }
+
+        .aside-left {
+            grid-row: 2 / 3;
+            grid-column: 1 / 2;
+        }
+
+        .main {
+            grid-row: 2 / 3;
+            grid-column: 2 / 3;
+        }
+
+        .aside-right {
+            grid-row: 2 / 3;
+            grid-column: 3 / 4;
+        }
+
+
+         /* Header Styles */
+
+         header {
+            display: flex;
+            border-bottom: 2px solid #F5EBEB;
+            padding-bottom: 10px;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.7rem;
+            color: black;
+        }
+
+        span {
+            font-weight: normal;
+        }
+
+        .header-logo a:hover {
+            text-decoration: none;
+            color: black;
+        }
+
+        .header-logo p {
+            margin: 0;
+        }
+
+        .header-aside {
+            margin-left: auto;
+            justify-self: unset;
+        }
+
+        .profile-picture {
+            width: 30px;
+            height: 30px;
+            border: 2px solid black;
+            border-radius: 50%;
+        }
+
+        /* Aside-left styles */
+
+
+
+
+    </style>
 </head>
 <body>
-    <header>
-        <div class="header-logo">
-            <p class="logo bold"><a href="Index.html">Study<span>Lounge</span></a></p>
+    <div class="main-container">
+
+        <header>
+            <div class="header-logo">
+                <p class="logo bold"><a href="Index.html">Study<span>Lounge</span></a></p>
+            </div>
+            <div class="header-aside">
+                <a href=""><img src="images/profile-pictures/pexels-maria-orlova-4946515.jpg" alt="" class="profile-picture"></a>
+            </div>
+        </header>
+
+        <div class="aside-left">
+            <div class="aside-left-header">
+                <p>100 days of coding challenge</p>
+                <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                <p class="asideleft-username">Steven Huerta</p>
+                <p class="asideleft-useremail">stevenhuerta@gmail.com</p>
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim facilisis gravida neque convallis a cras. Varius duis at consectetur lorem donec massa sapien faucibus et.
+                <br>
+                <br>
+                Enim facilisis gravida neque convallis a cras. Varius duis at consectetur lorem donec massa sapien faucibus et. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla. 
+                <br>
+                <br>
+                Cum sociis natoque penatibus et magnis dis. Elementum tempus egestas sed sed risus pretium quam vulputate dignissim.
+            </p>
         </div>
-        <div>
-            <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+    
+        <div class="main">
+            <div class="main-header">
+                <P class="logo">#Welcome <span>100 days of code challenge</span></P>
+                <img src="" alt="">
+                <p>420 Participants</p>
+            </div>
+
+            <div class="main-commentsection">
+                <div class="comment-box">
+                    <div class="comment-box-image">
+                         <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                    </div>
+                    <div>
+                        <p class="user-email">stevenhuerta@gmail.com</p>
+                        <p class="user-comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus. Convallis convallis tellus id interdum velit laoreet id donec ultrices.</p>
+                    </div>
+                </div>
+
+                <div class="comment-box">
+                    <div class="comment-box-image">
+                         <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                    </div>
+                    <div>
+                        <p class="user-email">stevenhuerta@gmail.com</p>
+                        <p class="user-comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus. Convallis convallis tellus id interdum velit laoreet id donec ultrices.</p>
+                    </div>
+                </div>
+
+                <div class="comment-box">
+                    <div class="comment-box-image">
+                         <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                    </div>
+                    <div>
+                        <p class="user-email">stevenhuerta@gmail.com</p>
+                        <p class="user-comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus. Convallis convallis tellus id interdum velit laoreet id donec ultrices.</p>
+                    </div>
+                </div>
+
+                <div class="comment-box">
+                    <div class="comment-box-image">
+                         <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                    </div>
+                    <div>
+                        <p class="user-email">stevenhuerta@gmail.com</p>
+                        <p class="user-comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus. Convallis convallis tellus id interdum velit laoreet id donec ultrices.</p>
+                    </div>
+                </div>
+
+                <div class="comment-box">
+                    <div class="comment-box-image">
+                         <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                    </div>
+                    <div>
+                        <p class="user-email">stevenhuerta@gmail.com</p>
+                        <p class="user-comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus. Convallis convallis tellus id interdum velit laoreet id donec ultrices.</p>
+                    </div>
+                </div>
+
+                <div class="comment-box">
+                    <div class="comment-box-image">
+                         <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                    </div>
+                    <div>
+                        <p class="user-email">stevenhuerta@gmail.com</p>
+                        <p class="user-comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus. Convallis convallis tellus id interdum velit laoreet id donec ultrices.</p>
+                    </div>
+                </div>
+
+                <div class="comment-box">
+                    <div class="comment-box-image">
+                         <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                    </div>
+                    <div>
+                        <p class="user-email">stevenhuerta@gmail.com</p>
+                        <p class="user-comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus. Convallis convallis tellus id interdum velit laoreet id donec ultrices.</p>
+                    </div>
+                </div>
+
+                <div class="comment-box">
+                    <div class="comment-box-image">
+                         <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                    </div>
+                    <div>
+                        <p class="user-email">stevenhuerta@gmail.com</p>
+                        <p class="user-comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus. Convallis convallis tellus id interdum velit laoreet id donec ultrices.</p>
+                    </div>
+                </div>
+
+                <div class="comment-box">
+                    <div class="comment-box-image">
+                         <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                    </div>
+                    <div>
+                        <p class="user-email">stevenhuerta@gmail.com</p>
+                        <p class="user-comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus. Convallis convallis tellus id interdum velit laoreet id donec ultrices.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comment-input">
+                <input type="text" placeholder="Write a message">
+                <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+            </div>
         </div>
-    </header>
-    <div class="aside-left">
-        
+    
+        <div class="aside-right">
+            <div class="aside-activerooms">
+
+            </div>
+
+            <div class="aside-members">
+                <div>
+                    <p>Participants</p>
+                </div>
+                <div>
+                    <div class="asideright-members">
+                        <div class="comment-box-image">
+                             <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                        </div>
+                        <div>
+                            <p class="user-email">stevenhuerta@gmail.com</p>
+                            <p class="user-comment"></p>
+                        </div>
+                    </div>
+
+                    <div class="asideright-members">
+                        <div class="comment-box-image">
+                             <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                        </div>
+                        <div>
+                            <p class="user-email">stevenhuerta@gmail.com</p>
+                            <p class="user-comment"></p>
+                        </div>
+                    </div>
+
+                    <div class="asideright-members">
+                        <div class="comment-box-image">
+                             <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                        </div>
+                        <div>
+                            <p class="user-email">stevenhuerta@gmail.com</p>
+                            <p class="user-comment"></p>
+                        </div>
+                    </div>
+
+                    <div class="asideright-members">
+                        <div class="comment-box-image">
+                             <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                        </div>
+                        <div>
+                            <p class="user-email">stevenhuerta@gmail.com</p>
+                            <p class="user-comment"></p>
+                        </div>
+                    </div>
+
+                    <div class="asideright-members">
+                        <div class="comment-box-image">
+                             <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                        </div>
+                        <div>
+                            <p class="user-email">stevenhuerta@gmail.com</p>
+                            <p class="user-comment"></p>
+                        </div>
+                    </div>
+
+                    <div class="asideright-members">
+                        <div class="comment-box-image">
+                             <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                        </div>
+                        <div>
+                            <p class="user-email">stevenhuerta@gmail.com</p>
+                            <p class="user-comment"></p>
+                        </div>
+                    </div>
+
+                    <div class="asideright-members">
+                        <div class="comment-box-image">
+                             <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                        </div>
+                        <div>
+                            <p class="user-email">stevenhuerta@gmail.com</p>
+                            <p class="user-comment"></p>
+                        </div>
+                    </div>
+
+                    <div class="asideright-members">
+                        <div class="comment-box-image">
+                             <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                        </div>
+                        <div>
+                            <p class="user-email">stevenhuerta@gmail.com</p>
+                            <p class="user-comment"></p>
+                        </div>
+                    </div>
+
+                    <div class="asideright-members">
+                        <div class="comment-box-image">
+                             <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                        </div>
+                        <div>
+                            <p class="user-email">stevenhuerta@gmail.com</p>
+                            <p class="user-comment"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
+
+
 </body>
 </html>
