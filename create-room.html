@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/12df7cb496.js" crossorigin="anonymous"></script>
@@ -19,22 +20,36 @@
             font-family: 'Open Sans', sans-serif;
         }
 
-        body {
+        body, html {
             margin: 0;
-            padding: 1rem 7%;
+            padding: 0;
+        }
+
+        body {
             background-color: #F9F5F6;
         }
+
 
         a {
                 text-decoration: none;
                 color: inherit;
         }
 
+        .bold {
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+
         /* Main Container Styles */
         .main-container {
             display: grid;
-            grid-template-rows: 50px auto;
-            grid-template-columns: 23% 1fr 23%;
+            grid-template-rows: auto 1fr;
+            grid-template-columns: 19% 1fr 25%;
+            border-left: 2px solid rgba(0,10,20,.1);
+            border-right: 2px solid rgba(0,10,20,.1);
+            width: 85%;
+            min-height: 100vh;
+            margin: 0 auto;
         }
 
         header {
@@ -50,6 +65,8 @@
         .main {
             grid-row: 2 / 3;
             grid-column: 2 / 3;
+            border-left: 2px solid rgba(0,10,20,.1);
+            border-right: 2px solid #000a141a;
         }
 
         .aside-right {
@@ -62,8 +79,9 @@
 
          header {
             display: flex;
-            border-bottom: 2px solid #F5EBEB;
-            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(0,10,20,.1);
+            padding: 10px 20px 10px;
+            justify-content: center;
         }
 
         .logo {
@@ -91,14 +109,164 @@
         }
 
         .profile-picture {
-            width: 30px;
-            height: 30px;
-            border: 2px solid black;
+            width: 32px;
+            height: 34px;
             border-radius: 50%;
         }
 
         /* Aside-left styles */
+        .aside-left {
+            display: flex;
+            flex-flow: column wrap;
+            padding-top: 5px;
+            /* background-color: #fbf1f1; */
+        }
 
+        .asideleft-header>p {
+            margin: 5px 0;
+        }
+
+        .bold_small {
+            font-weight: 550;
+            font-size: 0.8rem;
+            color: rgb(108, 107, 107);
+        }
+
+        .aside-username, .user-email {
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin: 5px 0 0;
+        }
+
+        .aside-useremail {
+            margin: 0 auto 5px;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-flow: nowrap;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .profile-container-aside {
+            margin-left: 10px;
+        }
+
+        .chat-description, .user-comment, .time-posted {
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: rgb(108, 107, 107);
+            font-family: 'Lato', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        /* Main styles */
+
+        .main-header {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            border-bottom: 2px solid rgba(0,10,20,.1);
+            /* border-left: 2px solid rgba(0,10,20,.1); */
+            /* border-right: 2px solid rgba(0,10,20,.1); */
+            padding: 0 10px;
+        }
+
+        .main-header .logo, .main-header .bold {
+            margin: 10px 0;
+            font-size: 1.3rem;
+        }
+
+        .mainheader-aside {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .mainheader-aside .bold {
+            font-size: 1rem;
+            color: rgb(108, 107, 107);
+        }
+
+        .main-commentsection {
+            max-height: 75vh;
+            overflow-y: auto;
+            /* border-left: 2px solid rgba(0,10,20,.1); */
+            /* border-right: 2px solid #000a141a; */
+            padding: 0 10px;
+        }
+
+        .main-commentsection::-webkit-scrollbar {
+            width: 2px; 
+        }
+
+        .main-commentsection::-webkit-scrollbar-thumb {
+            background-color: black;
+            border-radius: 1px;
+        }
+
+        .main-commentsection::-webkit-scrollbar-track {
+            background-color: white;
+            border-radius: 1px;
+        }
+
+        .comment-input {
+            width: 100%;
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 2% 10% 2% 3%;
+            outline-offset: 0;
+            margin-top: 10px;
+        }
+
+        .commentinput-box {
+            position: relative;
+            padding: 0 10px;
+        }
+
+        .commentinput-innerbox {
+            position: absolute;
+            top: 57%;
+            right: 20px;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+        }
+
+        .commentinput-innerbox img {
+            height: 20px;
+            margin-left: 15px;
+            padding: 0 15px;
+            padding-right: 5px;
+            border-left: 2px solid;
+        }
+
+        .comment-box {
+            display: flex;
+        }
+
+        .comment-box img {
+            margin-top: 5px;
+        }
+
+        .user-comment {
+            margin-top: 10px;
+        }
+
+        .useremail-usercomment {
+            margin-left: 10px;
+        }
+
+        .useremail-timeposted {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .time-posted {
+            margin: 0 0 0 auto;
+        }
 
 
 
@@ -117,13 +285,18 @@
         </header>
 
         <div class="aside-left">
-            <div class="aside-left-header">
-                <p>100 days of coding challenge</p>
-                <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
-                <p class="asideleft-username">Steven Huerta</p>
-                <p class="asideleft-useremail">stevenhuerta@gmail.com</p>
+            <div class="asideleft-header">
+                <p class="bold">100 days of coding challenge</p>
+                <p class="bold_small">Hosted by</p>
+                <div class="profile-container">
+                    <img src="images/profile-pictures/pexels-ketut-subiyanto-4307869.jpg" alt="" class="profile-picture">
+                    <div class="profile-container-aside">
+                        <p class="aside-username">Steven Huerta</p>
+                        <p class="aside-useremail bold_small">stevenhuerta@gmail.com</p>
+                    </div>
+                </div>
             </div>
-            <p>
+            <p class="chat-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim facilisis gravida neque convallis a cras. Varius duis at consectetur lorem donec massa sapien faucibus et.
                 <br>
                 <br>
@@ -136,106 +309,138 @@
     
         <div class="main">
             <div class="main-header">
-                <P class="logo">#Welcome <span>100 days of code challenge</span></P>
-                <img src="" alt="">
-                <p>420 Participants</p>
+                <P class="logo">#Welcome
+                <div class="mainheader-aside">
+                    <img src="" alt="">
+                    <p class="bold">420 Participants</p>
+                </div>
             </div>
 
             <div class="main-commentsection">
                 <div class="comment-box">
-                    <div class="comment-box-image">
-                         <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                    <div class="commentbox-image">
+                        <img src="images/profile-pictures/pexels-ketut-subiyanto-4307869.jpg" alt="" class="profile-picture">
                     </div>
-                    <div>
-                        <p class="user-email">stevenhuerta@gmail.com</p>
+                    <div class="useremail-usercomment">
+                        <div class="useremail-timeposted">
+                            <p class="user-email">stevenhuerta@gmail.com</p>
+                            <p class="time-posted">14:24 pm</p>
+                        </div>
                         <p class="user-comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus. Convallis convallis tellus id interdum velit laoreet id donec ultrices.</p>
                     </div>
                 </div>
 
                 <div class="comment-box">
                     <div class="comment-box-image">
-                         <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                        <img src="images/profile-pictures/pexels-ketut-subiyanto-4307869.jpg" alt="" class="profile-picture">
                     </div>
-                    <div>
-                        <p class="user-email">stevenhuerta@gmail.com</p>
+                    <div class="useremail-usercomment">
+                        <div class="useremail-timeposted">
+                            <p class="user-email">stevenhuerta@gmail.com</p>
+                            <p class="time-posted">14:24 pm</p>
+                        </div>
                         <p class="user-comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus. Convallis convallis tellus id interdum velit laoreet id donec ultrices.</p>
                     </div>
                 </div>
 
                 <div class="comment-box">
                     <div class="comment-box-image">
-                         <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                        <img src="images/profile-pictures/pexels-ketut-subiyanto-4307869.jpg" alt="" class="profile-picture">
                     </div>
-                    <div>
-                        <p class="user-email">stevenhuerta@gmail.com</p>
+                    <div class="useremail-usercomment">
+                        <div class="useremail-timeposted">
+                            <p class="user-email">stevenhuerta@gmail.com</p>
+                            <p class="time-posted">14:24 pm</p>
+                        </div>
                         <p class="user-comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus. Convallis convallis tellus id interdum velit laoreet id donec ultrices.</p>
                     </div>
                 </div>
 
                 <div class="comment-box">
                     <div class="comment-box-image">
-                         <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                        <img src="images/profile-pictures/pexels-ketut-subiyanto-4307869.jpg" alt="" class="profile-picture">
                     </div>
-                    <div>
-                        <p class="user-email">stevenhuerta@gmail.com</p>
+                    <div class="useremail-usercomment">
+                        <div class="useremail-timeposted">
+                            <p class="user-email">stevenhuerta@gmail.com</p>
+                            <p class="time-posted">14:24 pm</p>
+                        </div>
                         <p class="user-comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus. Convallis convallis tellus id interdum velit laoreet id donec ultrices.</p>
                     </div>
                 </div>
 
                 <div class="comment-box">
                     <div class="comment-box-image">
-                         <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                        <img src="images/profile-pictures/pexels-ketut-subiyanto-4307869.jpg" alt="" class="profile-picture">
                     </div>
-                    <div>
-                        <p class="user-email">stevenhuerta@gmail.com</p>
+                    <div class="useremail-usercomment">
+                        <div class="useremail-timeposted">
+                            <p class="user-email">stevenhuerta@gmail.com</p>
+                            <p class="time-posted">14:24 pm</p>
+                        </div>
                         <p class="user-comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus. Convallis convallis tellus id interdum velit laoreet id donec ultrices.</p>
                     </div>
                 </div>
 
                 <div class="comment-box">
                     <div class="comment-box-image">
-                         <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                        <img src="images/profile-pictures/pexels-ketut-subiyanto-4307869.jpg" alt="" class="profile-picture">
                     </div>
-                    <div>
-                        <p class="user-email">stevenhuerta@gmail.com</p>
+                    <div class="useremail-usercomment">
+                        <div class="useremail-timeposted">
+                            <p class="user-email">stevenhuerta@gmail.com</p>
+                            <p class="time-posted">14:24 pm</p>
+                        </div>
                         <p class="user-comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus. Convallis convallis tellus id interdum velit laoreet id donec ultrices.</p>
                     </div>
                 </div>
 
                 <div class="comment-box">
                     <div class="comment-box-image">
-                         <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                        <img src="images/profile-pictures/pexels-ketut-subiyanto-4307869.jpg" alt="" class="profile-picture">
                     </div>
-                    <div>
-                        <p class="user-email">stevenhuerta@gmail.com</p>
+                    <div class="useremail-usercomment">
+                        <div class="useremail-timeposted">
+                            <p class="user-email">stevenhuerta@gmail.com</p>
+                            <p class="time-posted">14:24 pm</p>
+                        </div>
                         <p class="user-comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus. Convallis convallis tellus id interdum velit laoreet id donec ultrices.</p>
                     </div>
                 </div>
 
                 <div class="comment-box">
                     <div class="comment-box-image">
-                         <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                        <img src="images/profile-pictures/pexels-ketut-subiyanto-4307869.jpg" alt="" class="profile-picture">
                     </div>
-                    <div>
-                        <p class="user-email">stevenhuerta@gmail.com</p>
+                    <div class="useremail-usercomment">
+                        <div class="useremail-timeposted">
+                            <p class="user-email">stevenhuerta@gmail.com</p>
+                            <p class="time-posted">14:24 pm</p>
+                        </div>
                         <p class="user-comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus. Convallis convallis tellus id interdum velit laoreet id donec ultrices.</p>
                     </div>
                 </div>
 
                 <div class="comment-box">
                     <div class="comment-box-image">
-                         <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+                        <img src="images/profile-pictures/pexels-ketut-subiyanto-4307869.jpg" alt="" class="profile-picture">
                     </div>
-                    <div>
-                        <p class="user-email">stevenhuerta@gmail.com</p>
+                    <div class="useremail-usercomment">
+                        <div class="useremail-timeposted">
+                            <p class="user-email">stevenhuerta@gmail.com</p>
+                            <p class="time-posted">14:24 pm</p>
+                        </div>
                         <p class="user-comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis orci a scelerisque purus. Convallis convallis tellus id interdum velit laoreet id donec ultrices.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="comment-input">
-                <input type="text" placeholder="Write a message">
-                <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
+            <div class="commentinput-box">
+                <input type="text" placeholder="Write a message" class="comment-input">
+                <div class="commentinput-innerbox">
+                    <i class="fa-regular fa-face-smile fa-lg" style="color: #000a14;"></i>
+                    <img src="images/Icons/send-message.png" alt="">
+                </div>
             </div>
         </div>
     
