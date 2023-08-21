@@ -4,295 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/12df7cb496.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CDN -->
     <title>Create-Room StudyLounge.com</title>
-    <style>
-        html {
-             box-sizing: border-box;
-        }
-
-        * {
-            box-sizing: inherit;
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        body, html {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: #F9F5F6;
-        }
-
-
-        a {
-                text-decoration: none;
-                color: inherit;
-        }
-
-        .bold {
-            font-weight: 700;
-            font-size: 1.3rem;
-        }
-
-        /* Main Container Styles */
-        .main-container {
-            display: grid;
-            grid-template-rows: auto 1fr;
-            grid-template-columns: 19% 1fr 25%;
-            border-left: 2px solid rgba(0,10,20,.1);
-            border-right: 2px solid rgba(0,10,20,.1);
-            width: 85%;
-            min-height: 100vh;
-            margin: 0 auto;
-        }
-
-        header {
-            grid-row: 1 / 2;
-            grid-column: 1 / span 3;
-        }
-
-        .aside-left {
-            grid-row: 2 / 3;
-            grid-column: 1 / 2;
-        }
-
-        .main {
-            grid-row: 2 / 3;
-            grid-column: 2 / 3;
-            border-left: 2px solid rgba(0,10,20,.1);
-            border-right: 2px solid #000a141a;
-        }
-
-        .aside-right {
-            grid-row: 2 / 3;
-            grid-column: 3 / 4;
-        }
-
-
-         /* Header Styles */
-
-         header {
-            display: flex;
-            border-bottom: 2px solid rgba(0,10,20,.1);
-            padding: 10px 20px 10px;
-            justify-content: center;
-        }
-
-        .logo {
-            font-weight: 700;
-            font-size: 1.7rem;
-            color: black;
-        }
-
-        span {
-            font-weight: normal;
-        }
-
-        .header-logo a:hover {
-            text-decoration: none;
-            color: black;
-        }
-
-        .header-logo p {
-            margin: 0;
-        }
-
-        .header-aside {
-            margin-left: auto;
-            justify-self: unset;
-        }
-
-        .profile-picture {
-            width: 32px;
-            height: 34px;
-            border-radius: 50%;
-        }
-
-        /* Aside-left styles */
-        .aside-left {
-            display: flex;
-            flex-flow: column wrap;
-            padding-top: 5px;
-            /* background-color: #fbf1f1; */
-        }
-
-        .asideleft-header>p {
-            margin: 5px 0;
-        }
-
-        .bold_small {
-            font-weight: 550;
-            font-size: 0.8rem;
-            color: rgb(108, 107, 107);
-        }
-
-        .aside-username, .user-email {
-            font-weight: 700;
-            font-size: 0.9rem;
-            margin: 5px 0 0;
-        }
-
-        .aside-useremail {
-            margin: 0 auto 5px;
-        }
-
-        .profile-container {
-            display: flex;
-            flex-flow: nowrap;
-            align-items: center;
-            margin-top: 10px;
-        }
-
-        .profile-container-aside {
-            margin-left: 10px;
-        }
-
-        .chat-description, .user-comment, .time-posted {
-            font-size: 0.9rem;
-            font-weight: bold;
-            color: rgb(108, 107, 107);
-            font-family: 'Lato', sans-serif;
-            letter-spacing: 0.5px;
-        }
-
-        /* Main styles */
-
-        .main-header {
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
-            border-bottom: 2px solid rgba(0,10,20,.1);
-            /* border-left: 2px solid rgba(0,10,20,.1); */
-            /* border-right: 2px solid rgba(0,10,20,.1); */
-            padding: 0 10px;
-        }
-
-        .main-header .logo, .main-header .bold {
-            margin: 10px 0;
-            font-size: 1.3rem;
-        }
-
-        .mainheader-aside {
-            margin-left: auto;
-            display: flex;
-            align-items: center;
-        }
-
-        .mainheader-aside .bold {
-            font-size: 1rem;
-            color: rgb(108, 107, 107);
-        }
-
-        .main-commentsection {
-            max-height: 75vh;
-            overflow-y: auto;
-            /* border-left: 2px solid rgba(0,10,20,.1); */
-            /* border-right: 2px solid #000a141a; */
-            padding: 0 10px;
-        }
-
-        .main-commentsection::-webkit-scrollbar {
-            width: 2px; 
-        }
-
-        .main-commentsection::-webkit-scrollbar-thumb {
-            background-color: black;
-            border-radius: 1px;
-        }
-
-        .main-commentsection::-webkit-scrollbar-track {
-            background-color: white;
-            border-radius: 1px;
-        }
-
-        .comment-input {
-            width: 100%;
-            border: 2px solid black;
-            border-radius: 5px;
-            padding: 2% 10% 2% 3%;
-            outline-offset: 0;
-            margin-top: 10px;
-        }
-
-        .commentinput-box {
-            position: relative;
-            padding: 0 10px;
-        }
-
-        .commentinput-innerbox {
-            position: absolute;
-            top: 57%;
-            right: 20px;
-            transform: translateY(-50%);
-            display: flex;
-            align-items: center;
-        }
-
-        .commentinput-innerbox img {
-            height: 20px;
-            margin-left: 15px;
-            padding: 0 15px;
-            padding-right: 5px;
-            border-left: 2px solid;
-        }
-
-        .comment-box {
-            display: flex;
-        }
-
-        .comment-box img {
-            margin-top: 5px;
-        }
-
-        .user-comment {
-            margin-top: 10px;
-        }
-
-        .useremail-usercomment {
-            margin-left: 10px;
-        }
-
-        .useremail-timeposted {
-            display: flex;
-            align-items: center;
-            flex-wrap: nowrap;
-        }
-
-        .time-posted {
-            margin: 0 0 0 auto;
-        }
-
-
-
-    </style>
+    <link rel="stylesheet" href="room.css">
 </head>
+
 <body>
     <div class="main-container">
 
         <header>
             <div class="header-logo">
-                <p class="logo bold"><a href="Index.html">Study<span>Lounge</span></a></p>
+                <p class="logo"><a href="Index.html">Study<span>Lounge</span></a></p>
             </div>
             <div class="header-aside">
-                <a href=""><img src="images/profile-pictures/pexels-maria-orlova-4946515.jpg" alt="" class="profile-picture"></a>
+                <div class="headeraside-image">
+                    <a href=""><img src="images/profile-pictures/pexels-maria-orlova-4946515.jpg" alt="" class="profile-picture"></a>
+                </div>
+                <div class="headeraside-details">
+                    <a href="http://"><p class="user-name">Onuh Andrew</p></a>
+                    <a href="http://"><p class="bold_small">@onuhandrew3@gmail.com</p></a>
+                </div>
             </div>
         </header>
 
         <div class="aside-left">
             <div class="asideleft-header">
-                <p class="bold">100 days of coding challenge</p>
+                <p class="bold gray">100 days of coding challenge</p>
                 <p class="bold_small">Hosted by</p>
                 <div class="profile-container">
                     <img src="images/profile-pictures/pexels-ketut-subiyanto-4307869.jpg" alt="" class="profile-picture">
                     <div class="profile-container-aside">
-                        <p class="aside-username">Steven Huerta</p>
-                        <p class="aside-useremail bold_small">stevenhuerta@gmail.com</p>
+                        <p class="user-name">Steven Huerta</p>
+                        <p class="user-email bold_small">stevenhuerta@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -309,10 +65,10 @@
     
         <div class="main">
             <div class="main-header">
-                <P class="logo">#Welcome
+                <P class="bold">100 days of coding challenge
                 <div class="mainheader-aside">
                     <img src="" alt="">
-                    <p class="bold">420 Participants</p>
+                    <p class="bold gray">420 Participants</p>
                 </div>
             </div>
 
@@ -445,102 +201,108 @@
         </div>
     
         <div class="aside-right">
-            <div class="aside-activerooms">
-
+            <div class="aside-createroom">
+                <p>Create your own room to interact with people</p>
+                <button type="button" class="button create-room" data-toggle="modal" data-target="#exampleModalCenter">
+                    Create Room
+                  </button>
             </div>
 
-            <div class="aside-members">
-                <div>
-                    <p>Participants</p>
-                </div>
-                <div>
-                    <div class="asideright-members">
-                        <div class="comment-box-image">
-                             <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
-                        </div>
+            <div class="aside-activerooms">
+                <p class="gray bold">Active Rooms</p>
+                    <div class="activeroom-content">
+                        <p>Working with SCSS</p>
+                        <p>30 members</p>
+                        <p class="activeroom-roomgroup">Javascript</p>
                         <div>
-                            <p class="user-email">stevenhuerta@gmail.com</p>
-                            <p class="user-comment"></p>
+                            <img src="" alt="">
+                            <img src="" alt="">
+                        </div>
+                    </div>  
+
+                    <div class="activeroom-content">
+                        <p class="user-email">Teaching jide</p>
+                        <p>70 members</p>
+                        <p class="activeroom-roomgroup">Post-gre SQL</p>
+                        <div>
+                            <img src="" alt="">
+                            <img src="" alt="">
+                        </div>  
+                    </div>
+            </div>
+
+            <div class="asideright-members">
+                <p class="gray bold">Participants</p>
+                <div class="participants-container">
+                    <div class="members-container">
+                             <img src="images/profile-pictures/pexels-tainá-bernard-3586091.jpg" alt="" class="profile-picture">
+                        <div class="profile-container-asideright">
+                            <p class="user-name">Steven Huerta</p>
+                            <p class="user-email bold_small">stevenhuerta@gmail.com</p>
                         </div>
                     </div>
 
-                    <div class="asideright-members">
-                        <div class="comment-box-image">
-                             <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
-                        </div>
-                        <div>
-                            <p class="user-email">stevenhuerta@gmail.com</p>
-                            <p class="user-comment"></p>
+                    <div class="members-container">
+                             <img src="images/profile-pictures/pexels-tainá-bernard-3586091.jpg" alt="" class="profile-picture">
+                        <div class="profile-container-asideright">
+                            <p class="user-name">Steven Huerta</p>
+                            <p class="user-email bold_small">stevenhuerta@gmail.com</p>
                         </div>
                     </div>
 
-                    <div class="asideright-members">
-                        <div class="comment-box-image">
-                             <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
-                        </div>
-                        <div>
-                            <p class="user-email">stevenhuerta@gmail.com</p>
-                            <p class="user-comment"></p>
+                    <div class="members-container">
+                             <img src="images/profile-pictures/pexels-tainá-bernard-3586091.jpg" alt="" class="profile-picture">
+                        <div class="profile-container-asideright">
+                            <p class="user-name">Steven Huerta</p>
+                            <p class="user-email bold_small">stevenhuerta@gmail.com</p>
                         </div>
                     </div>
 
-                    <div class="asideright-members">
-                        <div class="comment-box-image">
-                             <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
-                        </div>
-                        <div>
-                            <p class="user-email">stevenhuerta@gmail.com</p>
-                            <p class="user-comment"></p>
+                    <div class="members-container">
+                             <img src="images/profile-pictures/pexels-tainá-bernard-3586091.jpg" alt="" class="profile-picture">
+                        <div class="profile-container-asideright">
+                            <p class="user-name">Steven Huerta</p>
+                            <p class="user-email bold_small">stevenhuerta@gmail.com</p>
                         </div>
                     </div>
 
-                    <div class="asideright-members">
-                        <div class="comment-box-image">
-                             <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
-                        </div>
-                        <div>
-                            <p class="user-email">stevenhuerta@gmail.com</p>
-                            <p class="user-comment"></p>
+                    <div class="members-container">
+                             <img src="images/profile-pictures/pexels-tainá-bernard-3586091.jpg" alt="" class="profile-picture">
+                        <div class="profile-container-asideright">
+                            <p class="user-name">Steven Huerta</p>
+                            <p class="user-email bold_small">stevenhuerta@gmail.com</p>
                         </div>
                     </div>
 
-                    <div class="asideright-members">
-                        <div class="comment-box-image">
-                             <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
-                        </div>
-                        <div>
-                            <p class="user-email">stevenhuerta@gmail.com</p>
-                            <p class="user-comment"></p>
+                    <div class="members-container">
+                             <img src="images/profile-pictures/pexels-tainá-bernard-3586091.jpg" alt="" class="profile-picture">
+                        <div class="profile-container-asideright">
+                            <p class="user-name">Steven Huerta</p>
+                            <p class="user-email bold_small">stevenhuerta@gmail.com</p>
                         </div>
                     </div>
 
-                    <div class="asideright-members">
-                        <div class="comment-box-image">
-                             <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
-                        </div>
-                        <div>
-                            <p class="user-email">stevenhuerta@gmail.com</p>
-                            <p class="user-comment"></p>
+                    <div class="members-container">
+                             <img src="images/profile-pictures/pexels-tainá-bernard-3586091.jpg" alt="" class="profile-picture">
+                        <div class="profile-container-asideright">
+                            <p class="user-name">Steven Huerta</p>
+                            <p class="user-email bold_small">stevenhuerta@gmail.com</p>
                         </div>
                     </div>
 
-                    <div class="asideright-members">
-                        <div class="comment-box-image">
-                             <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
-                        </div>
-                        <div>
-                            <p class="user-email">stevenhuerta@gmail.com</p>
-                            <p class="user-comment"></p>
+                    <div class="members-container">
+                             <img src="images/profile-pictures/pexels-tainá-bernard-3586091.jpg" alt="" class="profile-picture">
+                        <div class="profile-container-asideright">
+                            <p class="user-name">Steven Huerta</p>
+                            <p class="user-email bold_small">stevenhuerta@gmail.com</p>
                         </div>
                     </div>
 
-                    <div class="asideright-members">
-                        <div class="comment-box-image">
-                             <!-- <img src="images/pexels-fauxels-768.jpg" alt="" class="landing-image one"> -->
-                        </div>
-                        <div>
-                            <p class="user-email">stevenhuerta@gmail.com</p>
-                            <p class="user-comment"></p>
+                    <div class="members-container">
+                             <img src="images/profile-pictures/pexels-tainá-bernard-3586091.jpg" alt="" class="profile-picture">
+                        <div class="profile-container-asideright">
+                            <p class="user-name">Steven Huerta</p>
+                            <p class="user-email bold_small">stevenhuerta@gmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -548,6 +310,60 @@
         </div>
 
     </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">CREATE A ROOM</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+    <div></div>
+    
+    <div class="modal-body">
+                <div class="room-name-container">
+                    <form action="" method="post">
+                        <label for="room-name" class="label-text">Room Name</label>
+                        <input type="text" name="" id="room-name" placeholder="Introduction to Web Development">
+                    </form>
+                </div>
+    
+                <div class="topic-container">
+                    <form action="" method="post">
+                        <label for="topic" class="label-text">Topic</label>
+                        <input type="text" name="" id="topic" list="topic-types">
+                        <datalist id="topic-types">
+                            <option value="Python">
+                            <option value="Javascript">
+                            <option value="React">
+                            <option value="MongoDb">
+                            <option value="dJango">
+                        </datalist>
+                    </form>
+                </div>
+    
+                <div class="about-container">
+                    <form action="" method="post">
+                        <label for="about" class="label-text">About</label>
+                        <textarea name="" id="text-area" cols="30" rows="10" placeholder="Write about your study group..."></textarea>
+                    </form>
+                </div>
+    </div>
+
+    <div class="modal-footer">
+          <button type="reset" class="modal_input button" data-dismiss="modal">Cancel</button>
+          <button type="button" class="modal_input button">Create room</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- end modal section -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
 </body>
