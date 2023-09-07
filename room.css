@@ -280,6 +280,7 @@ span {
    background-color: #F5EBEB;
    border-radius: 10px;
    padding: 16px 15px;
+   margin-bottom: 25px;
 }
 
 .aside-createroom p{
@@ -291,6 +292,7 @@ span {
 
 .aside-right .gray {
    font-size: .8rem;
+   margin-bottom: 10px;
 }
 
 .button {
@@ -313,20 +315,52 @@ span {
    display: flex;
    flex-flow: row wrap;
    border-radius: 10px;
-   padding: 20px 15px;
+   padding: 14px 20px;
    align-content: center;
    border: 2px solid black;
+   margin-bottom: 15px;
+}
+
+.activeroom-content .user-email {
+    width: 50%;
+    margin-top: 0;
 }
 
 .aside-activerooms>p {
    padding-left: 15px;
 }
 
+.activeroom-members {
+    margin-bottom: 13px;
+    margin-left: auto;
+}
+
+.activeroom-roomgroup {
+    margin-bottom: 0;
+    font-size: .7rem;
+    font-weight: bold;
+    color: green;
+    background-color: lightgreen;
+    padding: 2px .5rem;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.activeroom_roomgroup {
+    margin-bottom: 0;
+    font-size: .7rem;
+    font-weight: bold;
+    color: blue;
+    background-color: lightblue;
+    padding: 2px .5rem;
+    border-radius: 3px;
+}
+
 .members-container {
    display: flex;
    flex-flow: nowrap;
    align-items: center;
-   margin-top: 15px;
+   margin-top: 10px;
 }
 
 .members-container .user-email {
