@@ -16,12 +16,6 @@ body {
    background-color: #F9F5F6;
 }
 
-
-a {
-       text-decoration: none;
-       color: inherit;
-}
-
 .bold {
    font-weight: 700;
    font-size: 1rem;
@@ -36,9 +30,13 @@ a {
    border-left: 2px solid rgba(0,10,20,.1);
    border-right: 2px solid rgba(0,10,20,.1);
    width: 90%;
-   min-height: 100vh;
+   max-height: 100vh;
    margin: 0 auto;
-   /* padding-bottom: 25px; */
+}
+
+.main-container a {
+    text-decoration: none;
+    color: inherit;
 }
 
 header {
@@ -61,7 +59,7 @@ header {
 .aside-right {
    grid-row: 2 / 3;
    grid-column: 3 / 4;
-   padding: 25px 15px 25px;
+   padding: 25px 15px 0px;
 }
 
 
@@ -70,7 +68,7 @@ header {
 header {
    display: flex;
    border-bottom: 2px solid rgba(0,10,20,.1);
-   padding: 10px;
+   padding: 10px 10px;
    justify-content: center;
 }
 
@@ -112,6 +110,25 @@ span {
    justify-self: unset;
 }
 
+.headeraside-image {
+   position: relative;
+}
+
+.green-dot {
+   width: 6px;
+   height: 6px;
+}
+
+.greendot-pfp{
+   border: 2px solid #F9F5F6;
+   position: absolute;
+   bottom: 6px;
+   left: 26px;
+   border-radius: 50%;
+   width: 8px;
+   height: 8px;
+}
+
 .profile-picture {
    width: 32px;
    height: 34px;
@@ -122,13 +139,17 @@ span {
 .aside-left {
    display: flex;
    flex-flow: column wrap;
-   padding: 20px 15px 25px;
+   padding: 20px 15px 0px;
    background-color: #fdf5f5;
 }
 
 .gray {
    text-transform: uppercase;
    color: rgb(108, 107, 107);
+   font-size: .8rem;
+}
+
+.aside-left .gray {
    font-size: .9rem;
 }
 
@@ -193,13 +214,17 @@ span {
 }
 
 .mainheader-aside p {
-    margin: 10px auto;
+    margin: 10px 0 10px 5px;
 }
 
 .main-commentsection {
-   max-height: 75vh;
-   overflow-y: auto;
+   max-height: 76vh;
+   overflow-y: hidden;
    padding: 0px 15px;
+}
+
+.main-commentsection:hover {
+    overflow-y: scroll;
 }
 
 .main-commentsection::-webkit-scrollbar {
@@ -220,7 +245,7 @@ span {
    width: 100%;
    border: 2px solid black;
    border-radius: 5px;
-   padding: 2% 10% 2% 3%;
+   padding: 1.5% 13% 1.5% 3%;
    outline-offset: 0;
    margin-top: 10px;
 }
@@ -290,15 +315,10 @@ span {
    margin-top: 0;
 }
 
-.aside-right .gray {
-   font-size: .8rem;
-   margin-bottom: 10px;
-}
-
 .button {
    display: block;
    background-color: black;
-   border-radius: 10px;
+   border-radius: 6px;
    padding: 8px 10px;
    color: #F9F5F6;
    text-align: center;
@@ -336,18 +356,17 @@ span {
 }
 
 .activeroom-roomgroup {
-    margin-bottom: 0;
     font-size: .7rem;
     font-weight: bold;
     color: green;
     background-color: lightgreen;
     padding: 2px .5rem;
     border-radius: 3px;
-    margin-right: 5px;
+    margin: 3px 5px 0px 0px;
 }
 
 .activeroom_roomgroup {
-    margin-bottom: 0;
+    margin: 3px 0 0;
     font-size: .7rem;
     font-weight: bold;
     color: blue;
@@ -356,19 +375,39 @@ span {
     border-radius: 3px;
 }
 
+.activeroomcontent-img {
+    margin-left: auto;
+    position: relative;
+}
+
+.activeroomcontent_img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.img1 {
+    position: relative;
+    left: 20px;
+    z-index: -5;
+}
+
+.img2 {
+    position: relative;
+    left: 10px;
+    z-index: -3;
+}
+
 .members-container {
    display: flex;
    flex-flow: nowrap;
    align-items: center;
    margin-top: 10px;
+   position: relative;
 }
 
 .members-container .user-email {
    margin: 0 auto;
-}
-
-.members-container img {
-   /* margin-top: 12px; */
 }
 
 .members-container .user-name{
@@ -382,6 +421,33 @@ span {
 .asideright-members {
    padding: 0 15px;
 }
+
+.asideright-members>p {
+   margin: 25px 0 5px;
+}
+
+.participants-container {
+    max-height: 32vh;
+    overflow-y: hidden;
+}
+
+.participants-container:hover {
+    overflow-y: scroll;
+}
+
+.participants-container::-webkit-scrollbar {
+    width: 2px; 
+ }
+ 
+ .participants-container::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 1px;
+ }
+ 
+ .participants-container::-webkit-scrollbar-track {
+    background-color: white;
+    border-radius: 1px;
+ }
 
 
 /* Modal Styles */
@@ -447,4 +513,29 @@ textarea {
 
 .modal-content {
    background-color: #F9F5F6;
+}
+
+/* Media Query */
+
+@media  screen and (max-width: 83.125em)  {
+   .main-container {
+      width: 95%;
+      margin: 0 auto;
+   }
+
+   .participants-container {
+      max-height: 30.5vh;
+  }
+}
+
+@media screen and (max-width: 79em) {
+   .main-container {
+      width: 99%;
+      margin: 0;
+   }
+
+}
+
+@media screen and (max-width: 79em) {
+   .main-container
 }
