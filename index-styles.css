@@ -15,7 +15,7 @@ body {
 #parent-container {
     width: 100%;
     margin: auto;
-    background-color: #F9F5F6;
+    background-color: white;
     color: black;
     padding: 1rem 14% 0;
 }
@@ -25,6 +25,16 @@ header {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
+    position: fixed;
+    top: 0rem;
+    left: 14%;
+    z-index: 2;
+    padding-top: 10px;
+    background-color: white;
+}
+
+.header-logo {
+    margin-right: 37rem;
 }
 
 .header-logo a:hover {
@@ -63,6 +73,7 @@ a {
 
 .form-signin {
     margin-left: 2rem;
+    margin-right: 5rem;
 }
 
 .form-signin a:hover, .button:hover {
@@ -81,6 +92,10 @@ a {
 }
 
 /* Landing Section */
+main {
+    margin-top: 57px;
+}
+
 .landing-container {
     display: flex;
     margin-bottom: 5rem;
