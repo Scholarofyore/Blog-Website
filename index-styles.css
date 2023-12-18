@@ -62,8 +62,8 @@ a {
 }
 
 .search-bar input {
-    border: 2px solid black;
-    border-radius: 5px;
+    border: 2px solid rgb(192, 190, 190);
+    border-radius: 18px;
     padding: 5% 10% 5% 5%;
     width: 200%;
     position: relative;
